@@ -1,0 +1,3 @@
+# PokemonRampUp Overview
+
+Pokemon App V1 is an iOS application designed to help new users of the Pokemon universe quickly ramp up with Pokemon knowledge. That's why it is called `PokemonRampUp`. The app provides a page which contains a list of random Pokemon. This page will contain relevant information regarding the Pokemon such as the name, type and an image. Each Pokemon on the page can be clicked to access more information regarding it.
