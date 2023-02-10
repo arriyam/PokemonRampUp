@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Pokemon {
+struct Pokemon {
     let name: String
     let type: String
     let hiddenAbilites: [String]
@@ -18,7 +18,12 @@ class Pokemon {
     //
     // MARK: - Initialization
     //
-    init(name: String, type: String, hiddenAbilites: [String], image: UIImage, moves: [String]) {
+    init(name: String,
+         type: String,
+         hiddenAbilites: [String],
+         image: UIImage,
+         moves: [String]
+    ){
         self.name = name
         self.type = type
         self.hiddenAbilites = hiddenAbilites
