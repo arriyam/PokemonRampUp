@@ -13,6 +13,7 @@
 		E0C395F929957BB400F7CD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395F729957BB400F7CD13 /* Main.storyboard */; };
 		E0C395FB29957BB500F7CD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FA29957BB500F7CD13 /* Assets.xcassets */; };
 		E0C395FE29957BB500F7CD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */; };
+		E0E7B132299689D60053DCE1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7B131299689D60053DCE1 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E0C395FA29957BB500F7CD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0C395FD29957BB500F7CD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C395FF29957BB500F7CD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E7B131299689D60053DCE1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,7 @@
 		E0C395F029957BB400F7CD13 /* PokemonRampUp */ = {
 			isa = PBXGroup;
 			children = (
-				E0C396052996815D00F7CD13 /* Model */,
+				E0E7B130299689CC0053DCE1 /* Model */,
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
 				E0C395F529957BB400F7CD13 /* ViewController.swift */,
@@ -68,9 +70,10 @@
 			path = PokemonRampUp;
 			sourceTree = "<group>";
 		};
-		E0C396052996815D00F7CD13 /* Model */ = {
+		E0E7B130299689CC0053DCE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0E7B131299689D60053DCE1 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */,
+				E0E7B132299689D60053DCE1 /* NetworkError.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,
 				E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */,
 			);
