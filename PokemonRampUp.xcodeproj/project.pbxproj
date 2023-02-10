@@ -56,6 +56,7 @@
 		E0C395F029957BB400F7CD13 /* PokemonRampUp */ = {
 			isa = PBXGroup;
 			children = (
+				E0C396052996815D00F7CD13 /* Model */,
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
 				E0C395F529957BB400F7CD13 /* ViewController.swift */,
@@ -65,6 +66,13 @@
 				E0C395FF29957BB500F7CD13 /* Info.plist */,
 			);
 			path = PokemonRampUp;
+			sourceTree = "<group>";
+		};
+		E0C396052996815D00F7CD13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
