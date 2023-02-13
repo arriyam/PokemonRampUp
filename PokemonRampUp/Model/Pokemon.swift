@@ -6,28 +6,24 @@
 //
 
 import Foundation
-import UIKit
 
-struct Pokemon {
+struct Pokemon: Decodable {
     let name: String
-    let type: String
-    let hiddenAbilites: [String]
-    let image: UIImage
-    let moves: [String]
+    let types: [PokemonTypes]
+    let abilities: [PokemonAbility]
+    let sprites: PokemonSprite
+    let moves: [PokemonMoves]
     
-    //
-    // MARK: - Initialization
-    //
     init(name: String,
-         type: String,
-         hiddenAbilites: [String],
-         image: UIImage,
-         moves: [String]
+         types: [PokemonTypes],
+         abilities:[PokemonAbility],
+         sprites: PokemonSprite,
+         moves: [PokemonMoves]
     ){
         self.name = name
-        self.type = type
-        self.hiddenAbilites = hiddenAbilites
-        self.image = image
+        self.types = types
+        self.abilities = abilities
+        self.sprites = sprites
         self.moves = moves
     }
     
