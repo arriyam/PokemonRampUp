@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonAbility: Decodable {
+struct PokemonAbility: Decodable, Equatable {
     let name: String
     let url: String
     

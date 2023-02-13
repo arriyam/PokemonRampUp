@@ -12,13 +12,13 @@ struct Pokemon: Decodable {
     let types: [PokemonTypes]
     let abilities: [PokemonAbility]
     let sprites: PokemonSprite
-    let moves: [PokemonMoves]
+    let moves: [PokemonMove]
     
     init(name: String,
          types: [PokemonTypes],
          abilities:[PokemonAbility],
          sprites: PokemonSprite,
-         moves: [PokemonMoves]
+         moves: [PokemonMove]
     ){
         self.name = name
         self.types = types
@@ -26,5 +26,4 @@ struct Pokemon: Decodable {
         self.sprites = sprites
         self.moves = moves
     }
-    
 }

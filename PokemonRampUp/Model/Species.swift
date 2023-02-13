@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonMoves: Decodable {
+struct Species: Decodable {
     let move: PokemonMove
     
     init(move: PokemonMove

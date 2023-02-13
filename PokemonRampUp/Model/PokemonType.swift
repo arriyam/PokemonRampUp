@@ -1,5 +1,5 @@
 //
-//  PokemonTypes.swift
+//  PokemonType.swift
 //  PokemonRampUp
 //
 //  Created by Thushen Mohanarajah on 2023-02-13.
