@@ -33,7 +33,7 @@ final class PokemonRampUpTests: XCTestCase {
 //        }
 //    }
     
-    func testLaunchDecoding() {
+    func testPokemonDecoding() {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "pikachu_response", withExtension: "json"),
             let data = try? Data(contentsOf: url) else {
@@ -44,6 +44,7 @@ final class PokemonRampUpTests: XCTestCase {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 //        decoder.dateDecodingStrategy = .secondsSince1970
         guard let pikachu = try? decoder.decode(Pokemon.self, from: data) else {
+            print("Failed")
             return
         }
         
