@@ -10,7 +10,7 @@ import Foundation
 // TO-DO [POKEMON-0012] Create unit test for Network model
 class Network{
     
-    static func loadJSONFile<T: Decodable>(stringURL: String, type: T.Type) async throws -> T{
+    static func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T{
         guard let url = URL(string: stringURL) else {
             throw NetworkError.invalidURL
         }
