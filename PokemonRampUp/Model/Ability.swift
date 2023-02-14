@@ -8,7 +8,7 @@
 import Foundation
 
 struct Ability: Decodable {
-    let ability: Species
+    let ability: NameAndURL
     let isHidden: Bool
     let slot: Int
 
@@ -18,7 +18,7 @@ struct Ability: Decodable {
         case slot
     }
     
-    init(ability: Species,
+    init(ability: NameAndURL,
          isHidden: Bool,
          slot: Int
     ){

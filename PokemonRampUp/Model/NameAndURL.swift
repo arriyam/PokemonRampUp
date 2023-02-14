@@ -7,8 +7,8 @@
 
 import Foundation
 
-// This is a generic cstruct that has a name and URL variable. This is generic as there is many cases where this object is found when requesting Pokemon JSON from PokeAPI
-struct Species: Decodable {
+// This is a generic struct that has a name and URL variable. This is generic as there is many cases where this object is found when requesting Pokemon JSON from PokeAPI
+struct NameAndURL: Decodable {
     let name: String
     let url: String
     
