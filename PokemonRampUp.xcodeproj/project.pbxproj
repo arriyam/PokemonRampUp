@@ -14,6 +14,8 @@
 		E0C395F929957BB400F7CD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395F729957BB400F7CD13 /* Main.storyboard */; };
 		E0C395FB29957BB500F7CD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FA29957BB500F7CD13 /* Assets.xcassets */; };
 		E0C395FE29957BB500F7CD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */; };
+		E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCB299C0C00007A4D58 /* Network.swift */; };
+		E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E0C395FA29957BB500F7CD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0C395FD29957BB500F7CD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C395FF29957BB500F7CD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0C4ABCB299C0C00007A4D58 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				E03F6A672996887000367709 /* Pokemon.swift */,
+				E0C4ABCB299C0C00007A4D58 /* Network.swift */,
+				E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */,
 				E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */,
 				E03F6A682996887000367709 /* Pokemon.swift in Sources */,
+				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,
 				E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */,
 			);
