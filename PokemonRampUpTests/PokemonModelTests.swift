@@ -14,7 +14,8 @@ final class PokemonModelTests: XCTestCase {
     //NOTE: This test is to sure the Pokemon Model works as intended. Will come back later in TO-DO [POKEMON-0011] to complete all unit tests for this model
     func testPokemonModelDecoding() {
         let bundle = Bundle(for: type(of: self))
-        guard let url = bundle.url(forResource: "pikachu_response", withExtension: "json"),
+//        guard let url = bundle.url(forResource: "pikachu_response", withExtension: "json"),
+        guard let url = bundle.url(forResource: "pichu_response", withExtension: "json"),
             let data = try? Data(contentsOf: url) else {
                 return
         }
@@ -26,7 +27,8 @@ final class PokemonModelTests: XCTestCase {
             return
         }
         
-        XCTAssertEqual(pikachu.name, "pikachu")
+//        XCTAssertEqual(pikachu.name, "pikachu")
+        XCTAssertEqual(pikachu.name, "pichu")
         print("Successfully converted JSON to Pokemon Model")
     }
 

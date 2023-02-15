@@ -8,8 +8,7 @@
 import Foundation
 
 class Sprites: Decodable {
-    let backDefault, backFemale, backShiny, backShinyFemale: String
-    let frontDefault, frontFemale, frontShiny, frontShinyFemale: String
+    let backDefault, backFemale, backShiny, backShinyFemale, frontDefault, frontFemale, frontShiny, frontShinyFemale: String?
 
     enum CodingKeys: String, CodingKey {
         case backDefault = "back_default"
