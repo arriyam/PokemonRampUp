@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		E018BC7E299C19A3000548E4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E018BC7D299C19A3000548E4 /* WebServices.swift */; };
 		E03F6A682996887000367709 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* Pokemon.swift */; };
+		E08510C2299D568800DBD604 /* WebServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08510C1299D568800DBD604 /* WebServicesTest.swift */; };
+		E08510C4299D5CD000DBD604 /* pichu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E08510C3299D5CD000DBD604 /* pichu_response.json */; };
 		E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F129957BB400F7CD13 /* AppDelegate.swift */; };
 		E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F329957BB400F7CD13 /* SceneDelegate.swift */; };
 		E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F529957BB400F7CD13 /* ViewController.swift */; };
 		E0C395F929957BB400F7CD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395F729957BB400F7CD13 /* Main.storyboard */; };
 		E0C395FB29957BB500F7CD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FA29957BB500F7CD13 /* Assets.xcassets */; };
 		E0C395FE29957BB500F7CD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */; };
+		E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCB299C0C00007A4D58 /* Network.swift */; };
+		E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */; };
 		E0F0243B299BE4C700E83463 /* TypeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243A299BE4C700E83463 /* TypeElement.swift */; };
 		E0F0243D299BE52000E83463 /* NameAndURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243C299BE52000E83463 /* NameAndURL.swift */; };
 		E0F0243F299BE56A00E83463 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243E299BE56A00E83463 /* Ability.swift */; };
@@ -22,8 +26,6 @@
 		E0F02443299BE62600E83463 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02442299BE62600E83463 /* Move.swift */; };
 		E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02457299BE69000E83463 /* PokemonModelTests.swift */; };
 		E0F0245F299BE6B100E83463 /* pikachu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F0245E299BE6B100E83463 /* pikachu_response.json */; };
-		E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCB299C0C00007A4D58 /* Network.swift */; };
-		E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		E018BC7D299C19A3000548E4 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E03F6A672996887000367709 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E08510C1299D568800DBD604 /* WebServicesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTest.swift; sourceTree = "<group>"; };
+		E08510C3299D5CD000DBD604 /* pichu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pichu_response.json; path = ../../../../Desktop/pichu_response.json; sourceTree = "<group>"; };
 		E0C395EE29957BB400F7CD13 /* PokemonRampUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonRampUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C395F129957BB400F7CD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C395F329957BB400F7CD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				E0F0245E299BE6B100E83463 /* pikachu_response.json */,
+				E08510C3299D5CD000DBD604 /* pichu_response.json */,
 				E0F02457299BE69000E83463 /* PokemonModelTests.swift */,
+				E08510C1299D568800DBD604 /* WebServicesTest.swift */,
 			);
 			path = PokemonRampUpTests;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08510C4299D5CD000DBD604 /* pichu_response.json in Resources */,
 				E0F0245F299BE6B100E83463 /* pikachu_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08510C2299D568800DBD604 /* WebServicesTest.swift in Sources */,
 				E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
