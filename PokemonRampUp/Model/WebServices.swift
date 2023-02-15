@@ -14,8 +14,15 @@ class WebServices {
         return Int.random(in: 1..<1009)
     }
     
-//    func fetchRandomPokemon() -> Pokemon{
-//
-//    }
+    func fetchRandomPokemon() -> Pokemon?{
+        let pokeApiBaseUrlString = "https://pokeapi.co/api/v2/pokemon/"
+        let randomPokemonId = randomIdGenerator()
+        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(randomPokemonId)"
+        
+//        let pokemon = DefaultNetwork().loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon)
+        
+        return nil
+        
+    }
     
 }
