@@ -30,5 +30,21 @@ final class WebServicesTest: XCTestCase {
             print("Failed to grab Pokemon from PokeAPI: unknown")
         }
     }
+    
+//  Test to see if all 1008 Pokemon Jsons can be modeled to the Pokemon class
+    func testfetchAllPokemon() async {
+        for i in 1...1008{
+            do {
+                let pokemon = try await WebServices().fetchPokemon(pokemonId: i)
+                print("Pokemon \(i): \(pokemon.name)")
+                
+            }
+            catch{
+                print("Failed to grab Pokemon from PokeAPI: unknown")
+                return
+            }
+        }
+        print("All Pokemon works!")
+    }
 
 }

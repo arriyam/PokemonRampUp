@@ -22,10 +22,14 @@ class WebServices {
     
     func fetchRandomPokemon() async throws -> Pokemon {
         let randomPokemonId = randomIdGenerator()
-//        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(randomPokemonId)"
-        let uniquePokemonUrl =  "https://pokeapi.co/api/v2/pokemon/pichu/"
+        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(randomPokemonId)"
         let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
         return randomPokemon
     }
     
+    func fetchPokemon(pokemonId: Int) async throws -> Pokemon {
+        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonId)"
+        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
+        return randomPokemon
+    }
 }
