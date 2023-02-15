@@ -8,27 +8,24 @@
 import Foundation
 import UIKit
 
-struct Pokemon {
+// MARK: - Pokemon
+struct Pokemon: Decodable {
     let name: String
-    let type: String
-    let hiddenAbilites: [String]
-    let image: UIImage
-    let moves: [String]
+    let types: [TypeElement]
+    let abilities: [Ability]
+    let sprites: Sprites
+    let moves: [Move]
     
-    //
-    // MARK: - Initialization
-    //
     init(name: String,
-         type: String,
-         hiddenAbilites: [String],
-         image: UIImage,
-         moves: [String]
+         types: [TypeElement],
+         abilities: [Ability],
+         sprites: Sprites,
+         moves: [Move]
     ){
         self.name = name
-        self.type = type
-        self.hiddenAbilites = hiddenAbilites
-        self.image = image
+        self.types = types
+        self.abilities = abilities
+        self.sprites = sprites
         self.moves = moves
     }
-    
 }
