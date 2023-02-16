@@ -7,16 +7,11 @@
 
 import Foundation
 
-struct Ability: Decodable {
-    let ability: AbilityName
+struct Ability {
+    let ability: String
     let isHidden: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case ability
-        case isHidden = "is_hidden"
-    }
     
-    init(ability: AbilityName,
+    init(ability: String,
          isHidden: Bool
     ){
         self.ability = ability
@@ -24,11 +19,20 @@ struct Ability: Decodable {
     }
 }
 
-struct AbilityName: Decodable {
-    let name: String
+extension Ability: Decodable {
     
-    init(name: String){
-        self.name = name
+    enum CodingKeys: String, CodingKey {
+        case ability
+        case isHidden = "is_hidden"
+        case name
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let abilityContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .ability)
+        self.ability = try abilityContainer.decode(String.self, forKey: .name)
+        self.isHidden = try container.decode(Bool.self, forKey: .isHidden)
     }
 }
+
 

@@ -7,20 +7,28 @@
 
 import Foundation
 
-// MARK: - TypeElement
-struct TypeElement: Decodable {
-    let type: TypeElementName
+struct TypeElement {
+    let type: String
     
-    init(type: TypeElementName){
+    init(type: String) {
         self.type = type
     }
 }
 
-struct TypeElementName: Decodable {
-    let name: String
+extension TypeElement: Decodable {
     
-    init(name: String){
-        self.name = name
+    enum CodingKeys: String, CodingKey {
+        case type
+        case name
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let typeContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
+        self.type = try typeContainer.decode(String.self, forKey: .name)
     }
 }
+
+
+
 

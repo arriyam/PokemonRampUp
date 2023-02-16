@@ -7,20 +7,23 @@
 
 import Foundation
 
-// MARK: - Move
-struct Move: Decodable {
-    let move: MoveName
+struct Move {
+    let move: String
     
-    init(move: MoveName) {
+    init(move: String) {
         self.move = move
     }
 }
 
-struct MoveName: Decodable {
-    let name: String
+extension Move: Decodable{
+    enum CodingKeys: String, CodingKey {
+        case move
+        case name
+    }
     
-    init(name: String){
-        self.name = name
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let moveContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .move)
+        self.move = try moveContainer.decode(String.self, forKey: .name)
     }
 }
-

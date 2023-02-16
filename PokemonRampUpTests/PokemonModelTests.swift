@@ -29,6 +29,7 @@ final class PokemonModelTests: XCTestCase {
         
 //        XCTAssertEqual(pikachu.name, "pikachu")
         XCTAssertEqual(pikachu.name, "pichu")
+        print(pikachu.abilities[0].ability)
         print("Successfully converted JSON to Pokemon Model")
     }
 
