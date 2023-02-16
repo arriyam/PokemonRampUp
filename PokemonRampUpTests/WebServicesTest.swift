@@ -33,10 +33,10 @@ final class WebServicesTest: XCTestCase {
     
 //  Test to see if all 1008 Pokemon Jsons can be modeled to the Pokemon class
     func testfetchAllPokemon() async {
-        for i in 1...1008{
+        for pokemonId in 1...1008{
             do {
-                let pokemon = try await WebServices().fetchPokemon(pokemonId: i)
-                print("Pokemon \(i): \(pokemon.name)")
+                let pokemon = try await WebServices().fetchPokemon(pokemonId: pokemonId)
+                print("Pokemon \(pokemonId): \(pokemon.name)")
                 
             }
             catch{
