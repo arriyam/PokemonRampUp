@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TypeName: Decodable {
+struct TypeElementName: Decodable {
     let name: String
     let url: String
     
