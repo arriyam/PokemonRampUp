@@ -9,12 +9,8 @@ import Foundation
 
 struct TypeElementName: Decodable {
     let name: String
-    let url: String
     
-    init(name: String,
-         url: String
-    ){
+    init(name: String){
         self.name = name
-        self.url = url
     }
 }
