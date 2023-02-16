@@ -29,7 +29,6 @@ struct Pokemon {
 }
 
 extension Pokemon: Decodable{
-    
     enum CodingKeys: CodingKey {
         case name
         case types

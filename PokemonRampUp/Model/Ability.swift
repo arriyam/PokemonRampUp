@@ -20,7 +20,6 @@ struct Ability {
 }
 
 extension Ability: Decodable {
-    
     enum CodingKeys: String, CodingKey {
         case ability
         case isHidden = "is_hidden"

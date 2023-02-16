@@ -35,8 +35,6 @@ struct Sprites {
         self.frontShiny = frontShiny
         self.frontShinyFemale = frontShinyFemale
     }
-    
-    
 }
 
 extension Sprites: Decodable {

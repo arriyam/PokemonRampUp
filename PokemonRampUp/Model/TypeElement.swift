@@ -16,7 +16,6 @@ struct TypeElement {
 }
 
 extension TypeElement: Decodable {
-    
     enum CodingKeys: String, CodingKey {
         case type
         case name
