@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - Move
 struct Move: Decodable {
-    let move: NameAndURL
+    let move: MoveName
     
-    init(move: NameAndURL) {
+    init(move: MoveName) {
         self.move = move
     }
 }

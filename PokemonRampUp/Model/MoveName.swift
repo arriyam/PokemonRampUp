@@ -7,8 +7,7 @@
 
 import Foundation
 
-// This is a generic struct that has a name and URL variable. This is generic as there is many cases where this object is found when requesting Pokemon JSON from PokeAPI
-struct NameAndURL: Decodable {
+struct MoveName: Decodable {
     let name: String
     let url: String
     
@@ -19,5 +18,4 @@ struct NameAndURL: Decodable {
         self.url = url
     }
 }
-
 

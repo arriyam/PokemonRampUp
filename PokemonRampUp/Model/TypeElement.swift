@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - TypeElement
 struct TypeElement: Decodable {
-    let type: NameAndURL
+    let type: TypeName
     
-    init(type: NameAndURL){
+    init(type: TypeName){
         self.type = type
     }
 }

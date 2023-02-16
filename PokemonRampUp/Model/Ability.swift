@@ -8,22 +8,18 @@
 import Foundation
 
 struct Ability: Decodable {
-    let ability: NameAndURL
+    let ability: AbilityName
     let isHidden: Bool
-    let slot: Int
 
     enum CodingKeys: String, CodingKey {
         case ability
         case isHidden = "is_hidden"
-        case slot
     }
     
-    init(ability: NameAndURL,
-         isHidden: Bool,
-         slot: Int
+    init(ability: AbilityName,
+         isHidden: Bool
     ){
         self.ability = ability
         self.isHidden = isHidden
-        self.slot = slot
     }
 }

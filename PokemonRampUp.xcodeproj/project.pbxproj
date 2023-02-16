@@ -15,8 +15,10 @@
 		E0C395F929957BB400F7CD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395F729957BB400F7CD13 /* Main.storyboard */; };
 		E0C395FB29957BB500F7CD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FA29957BB500F7CD13 /* Assets.xcassets */; };
 		E0C395FE29957BB500F7CD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */; };
+		E0CC152B299E883200F80A3C /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CC152A299E883200F80A3C /* TypeName.swift */; };
+		E0CC152D299E895200F80A3C /* AbilityName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CC152C299E895200F80A3C /* AbilityName.swift */; };
 		E0F0243B299BE4C700E83463 /* TypeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243A299BE4C700E83463 /* TypeElement.swift */; };
-		E0F0243D299BE52000E83463 /* NameAndURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243C299BE52000E83463 /* NameAndURL.swift */; };
+		E0F0243D299BE52000E83463 /* MoveName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243C299BE52000E83463 /* MoveName.swift */; };
 		E0F0243F299BE56A00E83463 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0243E299BE56A00E83463 /* Ability.swift */; };
 		E0F02441299BE5B500E83463 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02440299BE5B500E83463 /* Sprites.swift */; };
 		E0F02443299BE62600E83463 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02442299BE62600E83463 /* Move.swift */; };
@@ -45,8 +47,10 @@
 		E0C395FA29957BB500F7CD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0C395FD29957BB500F7CD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C395FF29957BB500F7CD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0CC152A299E883200F80A3C /* TypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
+		E0CC152C299E895200F80A3C /* AbilityName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityName.swift; sourceTree = "<group>"; };
 		E0F0243A299BE4C700E83463 /* TypeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeElement.swift; sourceTree = "<group>"; };
-		E0F0243C299BE52000E83463 /* NameAndURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndURL.swift; sourceTree = "<group>"; };
+		E0F0243C299BE52000E83463 /* MoveName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveName.swift; sourceTree = "<group>"; };
 		E0F0243E299BE56A00E83463 /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		E0F02440299BE5B500E83463 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
 		E0F02442299BE62600E83463 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
@@ -77,11 +81,13 @@
 			isa = PBXGroup;
 			children = (
 				E03F6A672996887000367709 /* Pokemon.swift */,
-				E0F0243A299BE4C700E83463 /* TypeElement.swift */,
-				E0F0243C299BE52000E83463 /* NameAndURL.swift */,
-				E0F0243E299BE56A00E83463 /* Ability.swift */,
 				E0F02440299BE5B500E83463 /* Sprites.swift */,
+				E0F0243A299BE4C700E83463 /* TypeElement.swift */,
+				E0CC152A299E883200F80A3C /* TypeName.swift */,
+				E0F0243E299BE56A00E83463 /* Ability.swift */,
+				E0CC152C299E895200F80A3C /* AbilityName.swift */,
 				E0F02442299BE62600E83463 /* Move.swift */,
+				E0F0243C299BE52000E83463 /* MoveName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,12 +240,14 @@
 			files = (
 				E0F0243B299BE4C700E83463 /* TypeElement.swift in Sources */,
 				E0F02443299BE62600E83463 /* Move.swift in Sources */,
+				E0CC152D299E895200F80A3C /* AbilityName.swift in Sources */,
 				E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */,
 				E0F02441299BE5B500E83463 /* Sprites.swift in Sources */,
 				E03F6A682996887000367709 /* Pokemon.swift in Sources */,
 				E0F0243F299BE56A00E83463 /* Ability.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,
-				E0F0243D299BE52000E83463 /* NameAndURL.swift in Sources */,
+				E0CC152B299E883200F80A3C /* TypeName.swift in Sources */,
+				E0F0243D299BE52000E83463 /* MoveName.swift in Sources */,
 				E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
