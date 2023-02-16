@@ -15,3 +15,12 @@ struct Move: Decodable {
         self.move = move
     }
 }
+
+struct MoveName: Decodable {
+    let name: String
+    
+    init(name: String){
+        self.name = name
+    }
+}
+

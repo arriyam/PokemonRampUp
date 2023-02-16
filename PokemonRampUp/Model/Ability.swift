@@ -23,3 +23,12 @@ struct Ability: Decodable {
         self.isHidden = isHidden
     }
 }
+
+struct AbilityName: Decodable {
+    let name: String
+    
+    init(name: String){
+        self.name = name
+    }
+}
+

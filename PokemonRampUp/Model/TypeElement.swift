@@ -15,3 +15,12 @@ struct TypeElement: Decodable {
         self.type = type
     }
 }
+
+struct TypeElementName: Decodable {
+    let name: String
+    
+    init(name: String){
+        self.name = name
+    }
+}
+
