@@ -11,7 +11,7 @@ import XCTest
 // TO-DO [POKEMON-0013] Finish unit test for WebServices Model
 final class WebServicesTest: XCTestCase {
 
-    //NOTE: This test is to sure the Pokemon Model works as intended. Will come back later in TO-DO [POKEMON-0011] to complete all unit tests for this model
+    // This test is to sure the Pokemon Model works as intended. Will come back later in TO-DO [POKEMON-0011] to complete all unit tests for this model
     func testFetchingPokemon() async {
         do {
             let pokemon = try await WebServices().fetchRandomPokemon()
@@ -32,7 +32,7 @@ final class WebServicesTest: XCTestCase {
         }
     }
 
-//  Test to see if all 1008 Pokemon Jsons can be modeled to the Pokemon class
+    // Test to see if all 1008 Pokemon Jsons can be modeled to the Pokemon class
     func testfetchAllPokemon() async {
         for pokemonId in 1...1008{
             do {
