@@ -13,15 +13,6 @@ struct Sprites {
     let frontDefaultUrl: String?
     let frontShinyUrl: String?
     let frontDreamWorldUrl: String?
-
-    init(frontDefault: String,
-         frontShiny: String,
-         frontDreamWorld: String
-    ) {
-        self.frontDefaultUrl = frontDefault
-        self.frontShinyUrl = frontShiny
-        self.frontDreamWorldUrl = frontDreamWorld
-    }
 }
 
 // Custom decoder init block to work with nested JSON objects 

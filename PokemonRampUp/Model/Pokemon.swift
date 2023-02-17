@@ -14,17 +14,4 @@ struct Pokemon: Decodable {
     let abilities: [Ability]
     let sprites: Sprites
     let moves: [Move]
-    
-    init(name: String,
-         types: [TypeElement],
-         abilities: [Ability],
-         sprites: Sprites,
-         moves: [Move]
-    ){
-        self.name = name
-        self.types = types
-        self.abilities = abilities
-        self.sprites = sprites
-        self.moves = moves
-    }
 }

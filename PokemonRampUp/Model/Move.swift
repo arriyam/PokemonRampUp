@@ -10,10 +10,6 @@ import Foundation
 // Move struct represents a Pokemon move
 struct Move {
     let move: String
-    
-    init(move: String) {
-        self.move = move
-    }
 }
 
 // Custom decoder init block to work with nested JSON objects 

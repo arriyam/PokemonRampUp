@@ -11,13 +11,6 @@ import Foundation
 struct Ability {
     let ability: String
     let isHidden: Bool
-    
-    init(ability: String,
-         isHidden: Bool
-    ){
-        self.ability = ability
-        self.isHidden = isHidden
-    }
 }
 
 // Custom decoder init block to work with nested JSON objects 

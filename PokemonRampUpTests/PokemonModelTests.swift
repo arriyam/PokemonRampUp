@@ -27,6 +27,7 @@ final class PokemonModelTests: XCTestCase {
             return
         }
         
+        
 //        XCTAssertEqual(pikachu.name, "pikachu")
         XCTAssertEqual(pikachu.name, "pichu")
         print(pikachu.abilities[0].ability)

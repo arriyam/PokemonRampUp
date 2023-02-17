@@ -10,10 +10,6 @@ import Foundation
 // TypeElement struct represents a Pokemon type
 struct TypeElement {
     let type: String
-    
-    init(type: String) {
-        self.type = type
-    }
 }
 
 // Custom decoder init block to work with nested JSON objects 
