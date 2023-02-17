@@ -7,25 +7,25 @@
 
 import Foundation
 
-// Images struct represents a multiple URL's that direct to a Pokemon image
-struct Images {
-    // Since all properties can be nil there are 3 options to make sure that atleast one of them will have a vaild url to dispaly an image
+// Sprites struct represents multiple properties that contain URL's that direct to Pokemon images
+struct Sprites {
+    // There are multiple properties to make sure that atleast one of the poperties is vaild(not nil).
     let frontDefaultUrl: String?
     let frontShinyUrl: String?
     let frontDreamWorldUrl: String?
 
-    init(frontDefaultUrl: String,
-         frontShinyUrl: String,
-         frontDreamWorldUrl: String
+    init(frontDefault: String,
+         frontShiny: String,
+         frontDreamWorld: String
     ) {
-        self.frontDefaultUrl = frontDefaultUrl
-        self.frontShinyUrl = frontShinyUrl
-        self.frontDreamWorldUrl = frontDreamWorldUrl
+        self.frontDefaultUrl = frontDefault
+        self.frontShinyUrl = frontShiny
+        self.frontDreamWorldUrl = frontDreamWorld
     }
 }
 
 // Custom decoder init block to work with nested JSON objects 
-extension Images: Decodable {
+extension Sprites: Decodable {
     enum CodingKeys: String, CodingKey {
         case frontDefaultUrl, frontDreamWorldUrl = "front_default"
         case frontShinyUrl = "front_shiny"

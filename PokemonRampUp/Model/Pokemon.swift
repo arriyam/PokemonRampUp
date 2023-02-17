@@ -12,19 +12,19 @@ struct Pokemon: Decodable {
     let name: String
     let types: [TypeElement]
     let abilities: [Ability]
-    let images: Images
+    let sprites: Sprites
     let moves: [Move]
     
     init(name: String,
          types: [TypeElement],
          abilities: [Ability],
-         sprites: Images,
+         sprites: Sprites,
          moves: [Move]
     ){
         self.name = name
         self.types = types
         self.abilities = abilities
-        self.images = sprites
+        self.sprites = sprites
         self.moves = moves
     }
 }
