@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Ability struct represents a Pokemon ability
 struct Ability {
     let ability: String
     let isHidden: Bool
@@ -19,6 +20,7 @@ struct Ability {
     }
 }
 
+// Custom decoder init block to work with nested JSON objects 
 extension Ability: Decodable {
     enum CodingKeys: String, CodingKey {
         case ability

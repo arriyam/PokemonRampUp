@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Move struct represents a Pokemon move
 struct Move {
     let move: String
     
@@ -15,6 +16,7 @@ struct Move {
     }
 }
 
+// Custom decoder init block to work with nested JSON objects 
 extension Move: Decodable{
     enum CodingKeys: String, CodingKey {
         case move

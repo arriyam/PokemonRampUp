@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TypeElement struct represents a Pokemon type
 struct TypeElement {
     let type: String
     
@@ -15,6 +16,7 @@ struct TypeElement {
     }
 }
 
+// Custom decoder init block to work with nested JSON objects 
 extension TypeElement: Decodable {
     enum CodingKeys: String, CodingKey {
         case type
