@@ -7,28 +7,27 @@
 
 import Foundation
 
-class Sprites: Decodable {
-    let backDefault, backFemale, backShiny, backShinyFemale, frontDefault, frontFemale, frontShiny, frontShinyFemale: String?
+// Sprites struct represents multiple properties that contain URL's that direct to Pokemon images
+struct Sprites: Decodable {
+    // There are multiple properties to make sure that atleast one of the poperties is vaild(not nil).
+    let frontDefaultUrl: String?
+    let frontShinyUrl: String?
+    let frontDreamWorldUrl: String?
 
     enum CodingKeys: String, CodingKey {
-        case backDefault = "back_default"
-        case backFemale = "back_female"
-        case backShiny = "back_shiny"
-        case backShinyFemale = "back_shiny_female"
-        case frontDefault = "front_default"
-        case frontFemale = "front_female"
-        case frontShiny = "front_shiny"
-        case frontShinyFemale = "front_shiny_female"
+        case frontDefaultUrl, frontDreamWorldUrl = "front_default"
+        case frontShinyUrl = "front_shiny"
+        case other
+        case dreamWorld = "dream_world"
     }
 
-    init(backDefault: String, backFemale: String, backShiny: String, backShinyFemale: String, frontDefault: String, frontFemale: String, frontShiny: String, frontShinyFemale: String) {
-        self.backDefault = backDefault
-        self.backFemale = backFemale
-        self.backShiny = backShiny
-        self.backShinyFemale = backShinyFemale
-        self.frontDefault = frontDefault
-        self.frontFemale = frontFemale
-        self.frontShiny = frontShiny
-        self.frontShinyFemale = frontShinyFemale
+    // Custom decoder init block to work with nested JSON objects
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.frontDefaultUrl = try container.decodeIfPresent(String.self, forKey: .frontDefaultUrl)
+        self.frontShinyUrl = try container.decodeIfPresent(String.self, forKey: .frontShinyUrl)
+        let otherContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .other)
+        let dreamWorldContainer = try otherContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .dreamWorld)
+        self.frontDreamWorldUrl = try dreamWorldContainer.decodeIfPresent(String.self, forKey: .frontDreamWorldUrl)
     }
 }
