@@ -8,24 +8,19 @@
 import Foundation
 
 // Ability struct represents a Pokemon ability
-struct Ability {
+struct Ability: Decodable {
     let ability: String
-    let isHidden: Bool
-}
-
-// Custom decoder init block to work with nested JSON objects 
-extension Ability: Decodable {
+    
     enum CodingKeys: String, CodingKey {
         case ability
-        case isHidden = "is_hidden"
         case name
     }
     
+    // Custom decoder init block to work with nested JSON objects
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let abilityContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .ability)
         self.ability = try abilityContainer.decode(String.self, forKey: .name)
-        self.isHidden = try container.decode(Bool.self, forKey: .isHidden)
     }
 }
 
