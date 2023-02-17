@@ -32,4 +32,10 @@ class WebServices {
         let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
         return randomPokemon
     }
+    
+    func fetchPokemon(pokemonName: String) async throws -> Pokemon {
+        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonName)"
+        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
+        return randomPokemon
+    }
 }
