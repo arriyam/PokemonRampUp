@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E03F6A682996887000367709 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* Pokemon.swift */; };
+		E059C42729A0133B0016EA96 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C42629A0133B0016EA96 /* CustomCell.swift */; };
 		E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F129957BB400F7CD13 /* AppDelegate.swift */; };
 		E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F329957BB400F7CD13 /* SceneDelegate.swift */; };
 		E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F529957BB400F7CD13 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		E03F6A672996887000367709 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E059C42629A0133B0016EA96 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E0C395EE29957BB400F7CD13 /* PokemonRampUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonRampUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C395F129957BB400F7CD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C395F329957BB400F7CD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E059C42529A0131F0016EA96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E059C42629A0133B0016EA96 /* CustomCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E0C395E529957BB400F7CD13 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		E0C395F029957BB400F7CD13 /* PokemonRampUp */ = {
 			isa = PBXGroup;
 			children = (
+				E059C42529A0131F0016EA96 /* View */,
 				E03F6A662996886600367709 /* Model */,
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
@@ -160,6 +171,7 @@
 				E03F6A682996887000367709 /* Pokemon.swift in Sources */,
 				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,
+				E059C42729A0133B0016EA96 /* CustomCell.swift in Sources */,
 				E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
