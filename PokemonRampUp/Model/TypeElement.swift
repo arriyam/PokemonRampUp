@@ -9,7 +9,7 @@ import Foundation
 
 // TypeElement struct represents a Pokemon type
 struct TypeElement: Decodable {
-    let type: String
+    let name: String
     
     enum CodingKeys: String, CodingKey {
         case type
@@ -20,7 +20,7 @@ struct TypeElement: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let typeContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
-        self.type = try typeContainer.decode(String.self, forKey: .name)
+        self.name = try typeContainer.decode(String.self, forKey: .name)
     }
 }
 

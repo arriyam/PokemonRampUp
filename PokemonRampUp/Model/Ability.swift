@@ -9,7 +9,7 @@ import Foundation
 
 // Ability struct represents a Pokemon ability
 struct Ability: Decodable {
-    let ability: String
+    let name: String
     
     enum CodingKeys: String, CodingKey {
         case ability
@@ -20,7 +20,7 @@ struct Ability: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let abilityContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .ability)
-        self.ability = try abilityContainer.decode(String.self, forKey: .name)
+        self.name = try abilityContainer.decode(String.self, forKey: .name)
     }
 }
 
