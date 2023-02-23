@@ -15,10 +15,10 @@ struct Sprites: Decodable {
     let frontDreamWorldUrl: String?
     
     enum CodingKeys: String, CodingKey {
-        case frontDefaultUrl, frontDreamWorldUrl = "front_default"
-        case frontShinyUrl = "front_shiny"
+        case frontDefaultUrl, frontDreamWorldUrl
+        case frontShinyUrl
         case other
-        case dreamWorld = "dream_world"
+        case dreamWorld
     }
     
     // Custom decoder init block to work with nested JSON objects
