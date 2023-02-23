@@ -6,29 +6,20 @@
 //
 
 import Foundation
-import UIKit
 
-struct Pokemon {
+// Pokemon struct represents a Pokemon
+struct Pokemon: Decodable {
     let name: String
-    let type: String
-    let hiddenAbilites: [String]
-    let image: UIImage
-    let moves: [String]
+    let elementTypes: [ElementType]
+    let abilities: [Ability]
+    let sprites: Sprites
+    let moves: [Move]
     
-    //
-    // MARK: - Initialization
-    //
-    init(name: String,
-         type: String,
-         hiddenAbilites: [String],
-         image: UIImage,
-         moves: [String]
-    ){
-        self.name = name
-        self.type = type
-        self.hiddenAbilites = hiddenAbilites
-        self.image = image
-        self.moves = moves
+    enum CodingKeys: String, CodingKey {
+        case name
+        case elementTypes = "types"
+        case abilities
+        case sprites
+        case moves
     }
-    
 }
