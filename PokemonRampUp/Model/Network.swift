@@ -29,6 +29,7 @@ struct DefaultNetwork: Network {
          }
 
          let decoder = JSONDecoder()
+         decoder.keyDecodingStrategy = .convertFromSnakeCase
          guard let objectT = try? decoder.decode(T.self, from: data) else {
              throw NetworkError.dateParseError
          }
