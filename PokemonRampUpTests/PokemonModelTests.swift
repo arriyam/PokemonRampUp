@@ -12,7 +12,7 @@ import XCTest
 final class PokemonModelTests: XCTestCase {
 
     // NOTE: This test is to sure the Pokemon Model works as intended. Will come back later in TO-DO [POKEMON-0011] to complete all unit tests for this model
-    func testSuccessfullyPokemonModelDecoding() {
+    func testPokemonModelDecodingWithJSONReturnsSuccess() {
         // Given
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "pikachu_response", withExtension: "json"),
@@ -31,7 +31,7 @@ final class PokemonModelTests: XCTestCase {
         
     }
     
-    func testFailingPokemonModelDecoding() {
+    func testPokemonModelDecodingWithJSONReturnsFailure() {
         // Given
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "error_response", withExtension: "json"),
