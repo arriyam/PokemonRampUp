@@ -22,6 +22,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 350
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -31,7 +36,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         cell.pokemonName.text = "Hen"
         cell.pokemonType.text = "Bob"
-        
         
         return cell
     }

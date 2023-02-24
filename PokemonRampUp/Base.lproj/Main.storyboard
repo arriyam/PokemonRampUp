@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pokémon-->
+        <!--PokémonRampUp-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonRampUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="2zX-QH-CPC" secondAttribute="trailing" id="2FA-bt-97a"/>
                                                         <constraint firstAttribute="trailing" secondItem="39E-Rm-5Ic" secondAttribute="trailing" constant="10" id="9zC-5k-Jxu"/>
@@ -86,7 +85,7 @@
                             <constraint firstItem="vhb-Ft-YQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gCO-cu-IVM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pokémon" id="sae-qg-8gu"/>
+                    <navigationItem key="navigationItem" title="PokémonRampUp" id="sae-qg-8gu"/>
                     <connections>
                         <outlet property="pokemonView" destination="vhb-Ft-YQa" id="5xx-O3-ywx"/>
                     </connections>
@@ -120,9 +119,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
