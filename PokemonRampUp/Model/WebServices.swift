@@ -16,7 +16,7 @@ class WebServices {
         self.network = network
     }
 
-    // Returns a number from 1 to 1008(inclusive). The number is an Id which is used to fetch a random Pokemon from PokeAPI
+    //Returns a number from 1 to 1008(inclusive). The number is an Id which is used to fetch a random Pokemon from PokeAPI
     func randomIdGenerator() -> Int{
         return Int.random(in: 1...1008)
     }
