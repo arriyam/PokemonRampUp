@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A2DD129A92717007EAA5D /* WebServices.swift */; };
+		E03A2DD629A935A0007EAA5D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A2DD529A935A0007EAA5D /* CustomCell.swift */; };
 		E03F6A682996887000367709 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* Pokemon.swift */; };
 		E07445E229A7C8860035974E /* pikachu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445DF29A7C8860035974E /* pikachu_response.json */; };
 		E07445E329A7C8860035974E /* error_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445E029A7C8860035974E /* error_response.json */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E03A2DD129A92717007EAA5D /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		E03A2DD529A935A0007EAA5D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E03F6A672996887000367709 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		E07445DF29A7C8860035974E /* pikachu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pikachu_response.json; sourceTree = "<group>"; };
 		E07445E029A7C8860035974E /* error_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_response.json; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
 				E0C395F529957BB400F7CD13 /* ViewController.swift */,
+				E03A2DD529A935A0007EAA5D /* CustomCell.swift */,
 				E0C395F729957BB400F7CD13 /* Main.storyboard */,
 				E0C395FA29957BB500F7CD13 /* Assets.xcassets */,
 				E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 				E0F0243F299BE56A00E83463 /* Ability.swift in Sources */,
 				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,
+				E03A2DD629A935A0007EAA5D /* CustomCell.swift in Sources */,
 				E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

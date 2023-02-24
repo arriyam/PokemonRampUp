@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonTableViewCell" rowHeight="246" id="hvZ-fg-pAw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonTableViewCell" rowHeight="246" id="hvZ-fg-pAw" customClass="CustomCell" customModule="PokemonRampUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="246"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvZ-fg-pAw" id="Xt5-zw-15x">
@@ -67,6 +67,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="Uh1-Gg-JE9" secondAttribute="bottom" constant="5" id="kgJ-Eh-hVD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonImage" destination="2zX-QH-CPC" id="hsL-Ac-mnX"/>
+                                            <outlet property="pokemonName" destination="JZF-Oo-geX" id="svv-xd-oL3"/>
+                                            <outlet property="pokemonType" destination="39E-Rm-5Ic" id="Nlk-oR-5cv"/>
+                                            <outlet property="pokemonView" destination="Xt5-zw-15x" id="G8h-au-V7w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -81,6 +87,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pokémon" id="sae-qg-8gu"/>
+                    <connections>
+                        <outlet property="pokemonView" destination="vhb-Ft-YQa" id="5xx-O3-ywx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
