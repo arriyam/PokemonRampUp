@@ -12,24 +12,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var pokemonView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
+    let amountOfPokemon = 5
     var pokemons: [Pokemon]?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pokemonView.delegate = self
         pokemonView.dataSource = self
+        pokemons = []
         fetchPokemon()
-        print("hello")
     }
-    
-//    landing page = Pokemon[] -> details page
-    
     
     func fetchPokemon() {
         Task {
             do {
-                self.pokemons?.append(try await WebServices().fetchRandomPokemon())
+                var count = 0;
+                while (count < amountOfPokemon){
+                    self.pokemons?.append(try await WebServices().fetchRandomPokemon())
+                    count += 1
+                }
                 pokemonView.reloadData()
                 loadingView.isHidden = true
             }
@@ -57,9 +58,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pokemonView.dequeueReusableCell(withIdentifier: "PokemonTableViewCell") as! CustomCell
 
-        let pokemon = pokemons?[indexPath.row]
-        cell.pokemonName.text = pokemon?.name
-        cell.pokemonType.text = pokemon?.elementTypes[0].name
+        if (pokemons?.count ?? 0 == amountOfPokemon){
+            let pokemon = pokemons?[indexPath.row]
+            cell.pokemonName.text = pokemon?.name
+            cell.pokemonType.text = pokemon?.elementTypes[0].name
+        }
         return cell
     }
     
