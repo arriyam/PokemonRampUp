@@ -36,4 +36,6 @@ struct DefaultNetwork: Network {
 
          return objectT
      }
+//    func loadImage
+    
  }

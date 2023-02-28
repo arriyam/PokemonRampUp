@@ -11,6 +11,7 @@ import Foundation
 class WebServices {
 
     let network: Network
+    let pokemonUrl = "https://pokeapi.co/api/v2/pokemon/"
 
     init(network: Network = DefaultNetwork()) {
         self.network = network
@@ -22,20 +23,19 @@ class WebServices {
     }
 
     func fetchRandomPokemon() async throws -> Pokemon {
-        let randomPokemonId = randomIdGenerator()
-        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(randomPokemonId)"
+        let uniquePokemonUrl = pokemonUrl + String(randomIdGenerator())
         let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
         return randomPokemon
     }
 
     func fetchPokemon(pokemonId: Int) async throws -> Pokemon {
-        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonId)"
+        let uniquePokemonUrl = pokemonUrl + String(pokemonId)
         let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
         return randomPokemon
     }
 
     func fetchPokemon(pokemonName: String) async throws -> Pokemon {
-        let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonName)"
+        let uniquePokemonUrl = pokemonUrl + pokemonName
         let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
         return randomPokemon
     }
