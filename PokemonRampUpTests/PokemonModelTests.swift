@@ -23,12 +23,12 @@ final class PokemonModelTests: XCTestCase {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         // When
-        guard let _ = try? decoder.decode(Pokemon.self, from: data) else {
+        guard let _ = try? decoder.decode(PokemonJSON.self, from: data) else {
             // Then
             XCTFail("JSON file should not fail to decode")
             return
         }
-        
+    
     }
     
     func testPokemonModelDecodingWithJSONReturnsFailure() {
@@ -42,7 +42,7 @@ final class PokemonModelTests: XCTestCase {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         // When
-        guard let _ = try? decoder.decode(Pokemon.self, from: data) else {
+        guard let _ = try? decoder.decode(PokemonJSON.self, from: data) else {
             return
         }
         

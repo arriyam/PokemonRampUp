@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 // TO-DO [POKEMON-0012] Create unit test for Network model
 protocol Network {
     func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T
+    func loadUIImage(urlString: String?) async throws -> UIImage?
 }
 
 struct DefaultNetwork: Network {
@@ -36,6 +38,25 @@ struct DefaultNetwork: Network {
 
          return objectT
      }
-//    func loadImage
     
+    func loadUIImage(urlString: String?) async throws -> UIImage? {
+        if (urlString == nil){
+            return nil
+        }
+        guard let url = URL(string: urlString!) else {
+            throw NetworkError.invalidURL
+        }
+
+        let (data, response) = try await URLSession.shared.data(from: url)
+
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw NetworkError.invalidURL
+        }
+
+        guard let image = UIImage(data: data) else {
+            throw NetworkError.invaildImageData
+        }
+        return image
+    }
  }

@@ -2,24 +2,24 @@
 //  Pokemon.swift
 //  PokemonRampUp
 //
-//  Created by Thushen Mohanarajah on 2023-02-10.
+//  Created by Thushen Mohanarajah on 2023-02-28.
 //
 
 import Foundation
 
-// Pokemon struct represents a Pokemon
-struct Pokemon: Decodable {
+struct Pokemon {
     let name: String
     let elementTypes: [ElementType]
     let abilities: [Ability]
-    let sprites: Sprites
+    let images: Images
     let moves: [Move]
     
-    enum CodingKeys: String, CodingKey {
-        case name
-        case elementTypes = "types"
-        case abilities
-        case sprites
-        case moves
+    init(pokemonJSON: PokemonJSON, images: Images) {
+        self.name = pokemonJSON.name
+        self.elementTypes = pokemonJSON.elementTypes
+        self.abilities = pokemonJSON.abilities
+        self.images = images
+        self.moves = pokemonJSON.moves
     }
+    
 }

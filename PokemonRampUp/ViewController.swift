@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pokemonView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
-    let amountOfPokemon = 5
+    let amountOfPokemon = 1
     var pokemons: [Pokemon]?
     
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
                     self.pokemons?.append(try await WebServices().fetchRandomPokemon())
                     count += 1
                 }
+//                print(pokemons?[0].images)
                 pokemonView.reloadData()
                 loadingView.isHidden = true
             }
@@ -62,32 +63,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             let pokemon = pokemons?[indexPath.row]
             cell.pokemonName.text = pokemon?.name
             cell.pokemonType.text = pokemon?.elementTypes[0].name
+            cell.pokemonImage.image = pokemon?.images.frontDefault
+//            print(pokemon?.images.frontDreamWorld)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //action to go to details page - call the presentation of the details page. Instatite the detailsviewcontroller
-    }
-    
-    func fetchImage(urlString: String) async throws -> UIImage {
-
-        guard let url = URL(string: urlString) else {
-            throw NetworkError.invalidURL
-        }
-
-        let (data, response) = try await URLSession.shared.data(from: url)
-
-        guard let httpResponse = response as? HTTPURLResponse,
-              httpResponse.statusCode == 200 else {
-            throw NetworkError.invalidURL
-        }
-
-        guard let image = UIImage(data: data) else {
-            throw NetworkError.invaildImageData
-        }
-
-        return image
     }
     
 }
