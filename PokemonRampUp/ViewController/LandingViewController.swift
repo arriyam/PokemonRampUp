@@ -11,7 +11,7 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var pokemonView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
-    private let amountOfPokemon = 5
+    private let amountOfPokemon = 10
     private var pokemons: [Pokemon]?
     private let webServices = WebServices()
     
@@ -47,6 +47,12 @@ class LandingViewController: UIViewController {
                self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func refetchPokemon() {
+        loadingView.isHidden = false
+        pokemons?.removeAll()
+        fetchPokemon()
     }
     
 }
