@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" title="PokémonRampUp" id="sae-qg-8gu"/>
                     <connections>
                         <outlet property="loadingView" destination="6fX-Xz-CVr" id="Xcb-l0-gMF"/>
-                        <outlet property="pokemonView" destination="vhb-Ft-YQa" id="5xx-O3-ywx"/>
+                        <outlet property="tableView" destination="vhb-Ft-YQa" id="5xx-O3-ywx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,22 +8,22 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
-    @IBOutlet weak var pokemonView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
-    private let amountOfPokemon = 10
+    private let amountOfPokemon = 5
     private var pokemons: [Pokemon]?
     private let webServices = WebServices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pokemonView.delegate = self
-        pokemonView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         pokemons = []
         fetchPokemon()
     }
     
-    func fetchPokemon() {
+    private func fetchPokemon() {
         Task {
             do {
                 var count = 0;
@@ -31,7 +31,8 @@ class LandingViewController: UIViewController {
                     self.pokemons?.append(try await webServices.fetchRandomPokemon())
                     count += 1
                 }
-                pokemonView.reloadData()
+                tableView.setContentOffset(.zero, animated: true)
+                tableView.reloadData()
                 loadingView.isHidden = true
             }
             catch {
@@ -49,7 +50,7 @@ class LandingViewController: UIViewController {
         }
     }
     
-    func refetchPokemon() {
+    private func refetchPokemon() {
         loadingView.isHidden = false
         pokemons?.removeAll()
         fetchPokemon()
@@ -69,7 +70,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = pokemonView.dequeueReusableCell(withIdentifier: "PokemonTableViewCell") as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonTableViewCell") as! CustomCell
 
         if (pokemons?.count ?? 0 == amountOfPokemon){
             let pokemon = pokemons?[indexPath.row]
@@ -82,6 +83,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //action to go to details page - call the presentation of the details page. Instatite the detailsViewController
+        refetchPokemon()
     }
     
 }
