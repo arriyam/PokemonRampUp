@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var pokemonView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
-    let amountOfPokemon = 10
-    var pokemons: [Pokemon]?
+    private let amountOfPokemon = 5
+    private var pokemons: [Pokemon]?
+    private let webServices = WebServices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
             do {
                 var count = 0;
                 while (count < amountOfPokemon){
-                    self.pokemons?.append(try await WebServices().fetchRandomPokemon())
+                    self.pokemons?.append(try await webServices.fetchRandomPokemon())
                     count += 1
                 }
                 pokemonView.reloadData()

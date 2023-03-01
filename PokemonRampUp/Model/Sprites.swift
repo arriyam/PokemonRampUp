@@ -29,7 +29,5 @@ struct Sprites: Decodable {
         let otherContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .other)
         let dreamWorldContainer = try otherContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .officialArtwork)
         self.frontOfficialArtworkUrl = try dreamWorldContainer.decodeIfPresent(String.self, forKey: .frontDreamWorld)
-//        self.frontOfficialArtworkUrl = "dwswqsa"
-
     }
 }
