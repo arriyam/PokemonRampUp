@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pokemonView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     
-    let amountOfPokemon = 1
+    let amountOfPokemon = 10
     var pokemons: [Pokemon]?
     
     override func viewDidLoad() {
@@ -31,14 +31,21 @@ class ViewController: UIViewController {
                     self.pokemons?.append(try await WebServices().fetchRandomPokemon())
                     count += 1
                 }
-//                print(pokemons?[0].images)
                 pokemonView.reloadData()
                 loadingView.isHidden = true
             }
             catch {
                 print("Error while requesting to handle Pokemons")
                 loadingView.isHidden = true
-                // do something to handle `UIAlertMessage?`
+                let alert = UIAlertController(title: "Error Loading Pokémon", message: "Please try again or exist app", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Retry", comment: "This will retry to get Pokémon data"), style: .default, handler: { _ in
+                    self.loadingView.isHidden = false
+                    self.fetchPokemon()
+                    return
+                }))
+
+               self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -64,7 +71,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.pokemonName.text = pokemon?.name
             cell.pokemonType.text = pokemon?.elementTypes[0].name
             cell.pokemonImage.image = pokemon?.images.frontDefault
-            print(pokemon?.images)
         }
         return cell
     }
