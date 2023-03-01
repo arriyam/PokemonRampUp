@@ -43,6 +43,7 @@ class LandingViewController: UIViewController {
                 let alert = UIAlertController(title: "Error Loading Pokémon", message: "Please try again or exist app", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Retry", comment: "This will retry to get Pokémon data"), style: .default, handler: { _ in
+                    self.refreshControl.endRefreshing()
                     self.loadingView.isHidden = false
                     self.fetchPokemon()
                     return

@@ -12,6 +12,7 @@ class WebServices {
 
     let network: Network
     let pokemonUrl = "https://pokeapi.co/api/v2/pokemon/"
+    var count = 0
 
     init(network: Network = DefaultNetwork()) {
         self.network = network
@@ -31,7 +32,20 @@ class WebServices {
 
     func fetchRandomPokemon() async throws -> Pokemon {
         let uniquePokemonUrl = pokemonUrl + String(randomIdGenerator())
-        let randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
+        var randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
+        if (count == 0){
+            randomPokemonJSON.sprites.frontOfficialArtworkUrl = "fail"
+        }
+        else if (count >= 1 && count < 6){
+            randomPokemonJSON.sprites.frontOfficialArtworkUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/525.png"
+        }
+        else if (count == 6) {
+            randomPokemonJSON.sprites.frontOfficialArtworkUrl = "fail"
+        }
+        else{
+            randomPokemonJSON.sprites.frontOfficialArtworkUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/525.png"
+        }
+        count += 1
         let images = try await fetchPokemonUIIamges(pokemonJSON: randomPokemonJSON)
         let randomPokemon = Pokemon(pokemonJSON: randomPokemonJSON, images: images)
         return randomPokemon
