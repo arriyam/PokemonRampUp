@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Pokemon struct represents a Pokemon
+// PokemonJSON struct represents a Pokemon object that is decodbale as this is a responce model
 struct PokemonJSON: Decodable {
     let name: String
     let elementTypes: [ElementType]

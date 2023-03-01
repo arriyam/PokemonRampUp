@@ -17,7 +17,7 @@
 		E0BB017529AE6D8D00C1EE5A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB017429AE6D8D00C1EE5A /* Images.swift */; };
 		E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F129957BB400F7CD13 /* AppDelegate.swift */; };
 		E0C395F429957BB400F7CD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F329957BB400F7CD13 /* SceneDelegate.swift */; };
-		E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F529957BB400F7CD13 /* ViewController.swift */; };
+		E0C395F629957BB400F7CD13 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C395F529957BB400F7CD13 /* LandingViewController.swift */; };
 		E0C395F929957BB400F7CD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395F729957BB400F7CD13 /* Main.storyboard */; };
 		E0C395FE29957BB500F7CD13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */; };
 		E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4ABCB299C0C00007A4D58 /* Network.swift */; };
@@ -51,7 +51,7 @@
 		E0C395EE29957BB400F7CD13 /* PokemonRampUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonRampUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C395F129957BB400F7CD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C395F329957BB400F7CD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E0C395F529957BB400F7CD13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0C395F529957BB400F7CD13 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		E0C395F829957BB400F7CD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0C395FD29957BB500F7CD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C395FF29957BB500F7CD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				E03F6A662996886600367709 /* Model */,
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
-				E0C395F529957BB400F7CD13 /* ViewController.swift */,
+				E0C395F529957BB400F7CD13 /* LandingViewController.swift */,
 				E03A2DD529A935A0007EAA5D /* CustomCell.swift */,
 				E0C395F729957BB400F7CD13 /* Main.storyboard */,
 				E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 				E0F02443299BE62600E83463 /* Move.swift in Sources */,
 				E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */,
 				E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */,
-				E0C395F629957BB400F7CD13 /* ViewController.swift in Sources */,
+				E0C395F629957BB400F7CD13 /* LandingViewController.swift in Sources */,
 				E0F02441299BE5B500E83463 /* Sprites.swift in Sources */,
 				E03F6A682996887000367709 /* PokemonJSON.swift in Sources */,
 				E0BB017529AE6D8D00C1EE5A /* Images.swift in Sources */,

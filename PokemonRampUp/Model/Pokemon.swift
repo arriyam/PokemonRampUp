@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Pokemon struct represents a Pokemon object for the presenation layer
 struct Pokemon {
     let name: String
     let elementTypes: [ElementType]
