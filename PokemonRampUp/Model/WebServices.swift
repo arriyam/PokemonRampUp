@@ -21,22 +21,22 @@ class WebServices {
         return Int.random(in: 1...1008)
     }
 
-    func fetchRandomPokemon() async throws -> Pokemon {
+    func fetchRandomPokemon() async throws -> PokemonJSON {
         let randomPokemonId = randomIdGenerator()
         let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(randomPokemonId)"
-        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
+        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         return randomPokemon
     }
 
-    func fetchPokemon(pokemonId: Int) async throws -> Pokemon {
+    func fetchPokemon(pokemonId: Int) async throws -> PokemonJSON {
         let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonId)"
-        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
+        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         return randomPokemon
     }
 
-    func fetchPokemon(pokemonName: String) async throws -> Pokemon {
+    func fetchPokemon(pokemonName: String) async throws -> PokemonJSON {
         let uniquePokemonUrl = "https://pokeapi.co/api/v2/pokemon/\(pokemonName)"
-        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: Pokemon.self)
+        let randomPokemon = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         return randomPokemon
     }
 }
