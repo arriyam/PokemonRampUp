@@ -12,13 +12,13 @@ struct Sprites: Decodable {
     // There are multiple properties to make sure that atleast one of the poperties is vaild(not nil).
     let frontDefaultUrl: String?
     let frontShinyUrl: String?
-    let frontDreamWorldUrl: String?
+    let frontOfficialArtworkUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case frontDefault, frontDreamWorld
         case frontShiny
         case other
-        case dreamWorld
+        case officialArtwork = "official-artwork"
     }
     
     // Custom decoder init block to work with nested JSON objects
@@ -27,7 +27,7 @@ struct Sprites: Decodable {
         self.frontDefaultUrl = try container.decodeIfPresent(String.self, forKey: .frontDefault)
         self.frontShinyUrl = try container.decodeIfPresent(String.self, forKey: .frontShiny)
         let otherContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .other)
-        let dreamWorldContainer = try otherContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .dreamWorld)
-        self.frontDreamWorldUrl = try dreamWorldContainer.decodeIfPresent(String.self, forKey: .frontDreamWorld)
+        let dreamWorldContainer = try otherContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .officialArtwork)
+        self.frontOfficialArtworkUrl = try dreamWorldContainer.decodeIfPresent(String.self, forKey: .frontDreamWorld)
     }
 }

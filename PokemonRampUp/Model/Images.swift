@@ -11,5 +11,5 @@ import UIKit
 struct Images {
     let frontDefault: UIImage?
     let frontShiny: UIImage?
-    let frontDreamWorld: UIImage?
+    let frontOfficialArtwork: UIImage?
 }

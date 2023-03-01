@@ -64,7 +64,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.pokemonName.text = pokemon?.name
             cell.pokemonType.text = pokemon?.elementTypes[0].name
             cell.pokemonImage.image = pokemon?.images.frontDefault
-//            print(pokemon?.images.frontDreamWorld)
+            print(pokemon?.images)
         }
         return cell
     }

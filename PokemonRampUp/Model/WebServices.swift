@@ -24,15 +24,10 @@ class WebServices {
     }
     
     private func fetchPokemonUIIamges(pokemonJSON: PokemonJSON) async throws -> Images{
-        
         async let frontDefaultImage = try network.loadUIImage(urlString: pokemonJSON.sprites.frontDefaultUrl)
         async let frontShinyImage = try network.loadUIImage(urlString: pokemonJSON.sprites.frontShinyUrl)
-        async let frontDreamWorldImage = try network.loadUIImage(urlString: pokemonJSON.sprites.frontDreamWorldUrl)
-        
-        let images  = await Images(frontDefault: try frontDefaultImage, frontShiny: try frontShinyImage, frontDreamWorld: try frontDreamWorldImage)
-//        let images  = Images(frontDefault: nil, frontShiny: nil, frontDreamWorld: nil)
-        
-        return images
+        async let frontOfficialArtworkImage = try network.loadUIImage(urlString: pokemonJSON.sprites.frontOfficialArtworkUrl)
+        return await Images(frontDefault: try frontDefaultImage, frontShiny: try frontShinyImage, frontOfficialArtwork: try frontOfficialArtworkImage)
     }
 
     func fetchRandomPokemon() async throws -> Pokemon {
