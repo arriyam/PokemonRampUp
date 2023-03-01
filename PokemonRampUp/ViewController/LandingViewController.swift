@@ -14,11 +14,14 @@ class LandingViewController: UIViewController {
     private let amountOfPokemon = 5
     private var pokemons: [Pokemon]?
     private let webServices = WebServices()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        refreshControl.addTarget(self, action: #selector(refetchPokemon), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         pokemons = []
         fetchPokemon()
     }
@@ -31,7 +34,7 @@ class LandingViewController: UIViewController {
                     self.pokemons?.append(try await webServices.fetchRandomPokemon())
                     count += 1
                 }
-                tableView.setContentOffset(.zero, animated: true)
+                self.refreshControl.endRefreshing()
                 tableView.reloadData()
                 loadingView.isHidden = true
             }
@@ -50,12 +53,10 @@ class LandingViewController: UIViewController {
         }
     }
     
-    private func refetchPokemon() {
-        loadingView.isHidden = false
+    @objc private func refetchPokemon() {
         pokemons?.removeAll()
         fetchPokemon()
     }
-    
 }
 
 
@@ -83,7 +84,6 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //action to go to details page - call the presentation of the details page. Instatite the detailsViewController
-        refetchPokemon()
     }
     
 }
