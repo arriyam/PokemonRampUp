@@ -35,7 +35,6 @@ class LandingViewController: UIViewController {
                 loadingView.isHidden = true
             }
             catch {
-                print("Error while requesting to handle Pokemons")
                 loadingView.isHidden = true
                 let alert = UIAlertController(title: "Error Loading Pokémon", message: "Please try again or exist app", preferredStyle: .alert)
                 
@@ -76,7 +75,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //action to go to details page - call the presentation of the details page. Instatite the detailsviewcontroller
+        //action to go to details page - call the presentation of the details page. Instatite the detailsViewController
     }
     
 }
