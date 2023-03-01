@@ -12,7 +12,7 @@ struct Sprites: Decodable {
     // There are multiple properties to make sure that atleast one of the poperties is vaild(not nil).
     let frontDefaultUrl: String?
     let frontShinyUrl: String?
-    var frontOfficialArtworkUrl: String?
+    let frontOfficialArtworkUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case frontDefault, frontDreamWorld

@@ -84,7 +84,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //action to go to details page - call the presentation of the details page. Instatite the detailsViewController
+        // TO-DO POKEMON[0007] - add implmentation to go to Details page
     }
     
 }

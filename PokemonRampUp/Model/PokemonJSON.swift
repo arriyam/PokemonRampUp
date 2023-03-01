@@ -13,7 +13,7 @@ struct PokemonJSON: Decodable {
     let elementTypes: [ElementType]
     let abilities: [Ability]
     let moves: [Move]
-    var sprites: Sprites
+    let sprites: Sprites
 
     enum CodingKeys: String, CodingKey {
         case name
