@@ -19,6 +19,8 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = pokemon.images.frontDefault
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
+        imageView.clipsToBounds = true
         nameLabel.text = pokemon.name
         typeLabel.text = pokemon.elementTypes[0].name
 
