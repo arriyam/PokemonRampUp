@@ -89,7 +89,6 @@
                                             <outlet property="pokemonName" destination="JZF-Oo-geX" id="svv-xd-oL3"/>
                                             <outlet property="pokemonType" destination="39E-Rm-5Ic" id="Nlk-oR-5cv"/>
                                             <outlet property="pokemonView" destination="Xt5-zw-15x" id="G8h-au-V7w"/>
-                                            <segue destination="SXS-OS-kUo" kind="show" id="40u-GJ-QEF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,6 +124,7 @@
                     <connections>
                         <outlet property="loadingView" destination="6fX-Xz-CVr" id="Xcb-l0-gMF"/>
                         <outlet property="tableView" destination="vhb-Ft-YQa" id="5xx-O3-ywx"/>
+                        <segue destination="SXS-OS-kUo" kind="show" identifier="landingToDetailsPage" id="FT0-zQ-IWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

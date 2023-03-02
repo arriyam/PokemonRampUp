@@ -12,11 +12,16 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    var pokemon: Pokemon!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = pokemon.images.frontDefault
+        nameLabel.text = pokemon.name
+        typeLabel.text = pokemon.elementTypes[0].name
 
-        // Do any additional setup after loading the view.
     }
     
 
