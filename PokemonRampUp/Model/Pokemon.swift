@@ -14,13 +14,4 @@ struct Pokemon {
     let abilities: [Ability]
     let moves: [Move]
     let images: Images
-    
-    init(pokemonJSON: PokemonJSON, images: Images) {
-        self.name = pokemonJSON.name
-        self.elementTypes = pokemonJSON.elementTypes
-        self.abilities = pokemonJSON.abilities
-        self.moves = pokemonJSON.moves
-        self.images = images
-    }
-    
 }
