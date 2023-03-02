@@ -7,6 +7,7 @@
 
 import Foundation
 
+// NameContainerProtocol is a protocol that will be used in TypeElement, Ability and Move
 protocol NameContainerProtocol{
-    var name: String { get set}
+    var name: String { get set }
 }
