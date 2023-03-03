@@ -33,7 +33,7 @@ class WebServices {
         let uniquePokemonUrl = pokemonUrl + String(randomIdGenerator())
         let randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         let images = try await fetchPokemonUIIamges(pokemonJSON: randomPokemonJSON)
-        let randomPokemon = Pokemon(pokemonJSON: randomPokemonJSON, images: images)
+        let randomPokemon = PokemonJSONToPokemon(pokemonJSON: randomPokemonJSON, images: images).convert()
         return randomPokemon
     }
 
@@ -41,7 +41,7 @@ class WebServices {
         let uniquePokemonUrl = pokemonUrl + String(pokemonId)
         let randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         let images = try await fetchPokemonUIIamges(pokemonJSON: randomPokemonJSON)
-        let randomPokemon = Pokemon(pokemonJSON: randomPokemonJSON, images: images)
+        let randomPokemon = PokemonJSONToPokemon(pokemonJSON: randomPokemonJSON, images: images).convert()
         return randomPokemon
     }
 
@@ -49,7 +49,7 @@ class WebServices {
         let uniquePokemonUrl = pokemonUrl + pokemonName
         let pokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         let images = try await fetchPokemonUIIamges(pokemonJSON: pokemonJSON)
-        let pokemon = Pokemon(pokemonJSON: pokemonJSON, images: images)
+        let pokemon = PokemonJSONToPokemon(pokemonJSON: pokemonJSON, images: images).convert()
         return pokemon
     }
 }

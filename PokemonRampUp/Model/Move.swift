@@ -8,8 +8,8 @@
 import Foundation
 
 // Move struct represents a Pokemon move
-struct Move: Decodable {
-    let name: String
+struct Move: Decodable, NameContainerProtocol {
+    var name: String
     
     enum CodingKeys: String, CodingKey {
         case move
