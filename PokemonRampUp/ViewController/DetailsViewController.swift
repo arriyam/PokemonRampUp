@@ -9,12 +9,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    
+    @IBOutlet weak var moveTableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+
     var pokemon: Pokemon!
-    
-    
+    var pokemonMoves: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +25,41 @@ class DetailsViewController: UIViewController {
         imageView.clipsToBounds = true
         nameLabel.text = pokemon.name
         typeLabel.text = pokemon.elementTypes[0].name
-
+        
+        moveTableView.delegate = self
+        moveTableView.dataSource = self
+        setPokemonMoveList()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setPokemonMoveList(){
+        self.pokemonMoves = []
+        
+        for move in pokemon.moves{
+            self.pokemonMoves?.append(move.name)
+        }
+        moveTableView.reloadData()
+        
     }
-    */
+}
 
+extension DetailsViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pokemonMoves?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonMoveCell") as! MoveTableCustomCell
+
+        if (pokemonMoves?.count != nil){
+            let name = pokemonMoves?[indexPath.row]
+            cell.move.text = name
+        }
+        cell.selectionStyle = .none
+        return cell
+    }
 }

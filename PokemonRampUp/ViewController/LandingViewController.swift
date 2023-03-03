@@ -82,7 +82,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonTableViewCell") as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonTableViewCell") as! PokemonTableCustomCell
 
         if (pokemons?.count ?? 0 == amountOfPokemon){
             let pokemon = pokemons?[indexPath.row]
@@ -97,5 +97,4 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
         self.currentPokemonIndex = indexPath.row
         performSegue(withIdentifier: "landingToDetailsPage", sender: self)
     }
-    
 }

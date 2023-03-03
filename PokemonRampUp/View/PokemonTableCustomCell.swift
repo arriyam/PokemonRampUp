@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class CustomCell: UITableViewCell {
+class PokemonTableCustomCell: UITableViewCell {
 
     @IBOutlet weak var pokemonView: UIView!
     @IBOutlet weak var pokemonImage: UIImageView!
