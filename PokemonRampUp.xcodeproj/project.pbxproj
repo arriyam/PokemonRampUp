@@ -28,6 +28,9 @@
 		E0F02441299BE5B500E83463 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02440299BE5B500E83463 /* Sprites.swift */; };
 		E0F02443299BE62600E83463 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02442299BE62600E83463 /* Move.swift */; };
 		E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02457299BE69000E83463 /* PokemonModelTests.swift */; };
+		E0FE250229B6548B0069FF80 /* AlertFactoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250129B6548B0069FF80 /* AlertFactoryService.swift */; };
+		E0FE250729B656DA0069FF80 /* AlertImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250629B656DA0069FF80 /* AlertImplementation.swift */; };
+		E0FE250929B657470069FF80 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250829B657470069FF80 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		E0F02442299BE62600E83463 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		E0F02455299BE69000E83463 /* PokemonRampUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonRampUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F02457299BE69000E83463 /* PokemonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModelTests.swift; sourceTree = "<group>"; };
+		E0FE250129B6548B0069FF80 /* AlertFactoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactoryService.swift; sourceTree = "<group>"; };
+		E0FE250629B656DA0069FF80 /* AlertImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImplementation.swift; sourceTree = "<group>"; };
+		E0FE250829B657470069FF80 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 				E0C4ABCB299C0C00007A4D58 /* Network.swift */,
 				E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */,
 				E03A2DD129A92717007EAA5D /* WebServices.swift */,
+				E0FE250829B657470069FF80 /* AlertView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,10 +156,12 @@
 		E0C395F029957BB400F7CD13 /* PokemonRampUp */ = {
 			isa = PBXGroup;
 			children = (
+				E0FE250029B6545D0069FF80 /* Protocol */,
 				E03F6A662996886600367709 /* Model */,
 				E09F54D429AFE81A00E906C1 /* ViewController */,
 				E09F54D329AFE80F00E906C1 /* View */,
 				E0C395F129957BB400F7CD13 /* AppDelegate.swift */,
+				E0FE250629B656DA0069FF80 /* AlertImplementation.swift */,
 				E0C395F329957BB400F7CD13 /* SceneDelegate.swift */,
 				E0C395F729957BB400F7CD13 /* Main.storyboard */,
 				E0C395FC29957BB500F7CD13 /* LaunchScreen.storyboard */,
@@ -169,6 +178,14 @@
 				E07445DE29A7C7F60035974E /* Resources */,
 			);
 			path = PokemonRampUpTests;
+			sourceTree = "<group>";
+		};
+		E0FE250029B6545D0069FF80 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E0FE250129B6548B0069FF80 /* AlertFactoryService.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,12 +294,15 @@
 			files = (
 				E0F0243B299BE4C700E83463 /* ElementType.swift in Sources */,
 				E0F02443299BE62600E83463 /* Move.swift in Sources */,
+				E0FE250229B6548B0069FF80 /* AlertFactoryService.swift in Sources */,
 				E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */,
 				E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */,
 				E09F54D029AFD45A00E906C1 /* Images.swift in Sources */,
 				E0C395F629957BB400F7CD13 /* LandingViewController.swift in Sources */,
 				E09F54CE29AFD42A00E906C1 /* Pokemon.swift in Sources */,
 				E0F02441299BE5B500E83463 /* Sprites.swift in Sources */,
+				E0FE250729B656DA0069FF80 /* AlertImplementation.swift in Sources */,
+				E0FE250929B657470069FF80 /* AlertView.swift in Sources */,
 				E03F6A682996887000367709 /* PokemonJSON.swift in Sources */,
 				E0F0243F299BE56A00E83463 /* Ability.swift in Sources */,
 				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,

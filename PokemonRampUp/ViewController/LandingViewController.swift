@@ -15,15 +15,18 @@ class LandingViewController: UIViewController {
     private var pokemons: [Pokemon]?
     private let webServices = WebServices()
     private let refreshControl = UIRefreshControl()
+    private var alertFactory: AlertFactoryService = AlertImplementation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        alertFactory.delegate = self 
         refreshControl.addTarget(self, action: #selector(refetchPokemon), for: .valueChanged)
         tableView.refreshControl = refreshControl
         pokemons = []
         fetchPokemon()
+        
     }
     
     private func fetchPokemon() {
@@ -40,16 +43,7 @@ class LandingViewController: UIViewController {
             }
             catch {
                 loadingView.isHidden = true
-                let alert = UIAlertController(title: "Error Loading Pokémon", message: "Please try again or exist app", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Retry", comment: "This will retry to get Pokémon data"), style: .default, handler: { _ in
-                    self.refreshControl.endRefreshing()
-                    self.loadingView.isHidden = false
-                    self.fetchPokemon()
-                    return
-                }))
-
-               self.present(alert, animated: true, completion: nil)
+                displayAlert()
             }
         }
     }
@@ -57,6 +51,20 @@ class LandingViewController: UIViewController {
     @objc private func refetchPokemon() {
         pokemons?.removeAll()
         fetchPokemon()
+    }
+    
+    func displayAlert() {
+      let alertData = AlertView(title: "Error Loading Pokémon",
+                              message: "Please try again or exist app",
+                              style: .alert,
+                              enableOkAction: true,
+                              okActionTitle: "Retry",
+                              okActionStyle: .default,
+                              enableCancelAction: false,
+                              cancelActionTitle: "")
+      
+      let alert = alertFactory.build(alertData: alertData)
+      present(alert, animated: true, completion: nil)
     }
 }
 
@@ -87,4 +95,15 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
         // TO-DO POKEMON[0007] - add implmentation to go to Details page
     }
     
+}
+
+extension LandingViewController: AlertActionDelegate {
+  func actionOne() {
+      self.refreshControl.endRefreshing()
+      self.loadingView.isHidden = false
+      self.fetchPokemon()
+  }
+  func actionTwo() {
+     print("ActionTwo called")
+  }
 }
