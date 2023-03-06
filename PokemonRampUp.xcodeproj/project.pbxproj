@@ -30,7 +30,7 @@
 		E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F02457299BE69000E83463 /* PokemonModelTests.swift */; };
 		E0FE250229B6548B0069FF80 /* AlertFactoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250129B6548B0069FF80 /* AlertFactoryService.swift */; };
 		E0FE250729B656DA0069FF80 /* AlertImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250629B656DA0069FF80 /* AlertImplementation.swift */; };
-		E0FE250929B657470069FF80 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250829B657470069FF80 /* AlertView.swift */; };
+		E0FE250929B657470069FF80 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE250829B657470069FF80 /* AlertViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		E0F02457299BE69000E83463 /* PokemonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModelTests.swift; sourceTree = "<group>"; };
 		E0FE250129B6548B0069FF80 /* AlertFactoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactoryService.swift; sourceTree = "<group>"; };
 		E0FE250629B656DA0069FF80 /* AlertImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImplementation.swift; sourceTree = "<group>"; };
-		E0FE250829B657470069FF80 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		E0FE250829B657470069FF80 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				E0C4ABCB299C0C00007A4D58 /* Network.swift */,
 				E0C4ABCD299C0DBF007A4D58 /* NetworkError.swift */,
 				E03A2DD129A92717007EAA5D /* WebServices.swift */,
-				E0FE250829B657470069FF80 /* AlertView.swift */,
+				E0FE250829B657470069FF80 /* AlertViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				E09F54CE29AFD42A00E906C1 /* Pokemon.swift in Sources */,
 				E0F02441299BE5B500E83463 /* Sprites.swift in Sources */,
 				E0FE250729B656DA0069FF80 /* AlertImplementation.swift in Sources */,
-				E0FE250929B657470069FF80 /* AlertView.swift in Sources */,
+				E0FE250929B657470069FF80 /* AlertViewModel.swift in Sources */,
 				E03F6A682996887000367709 /* PokemonJSON.swift in Sources */,
 				E0F0243F299BE56A00E83463 /* Ability.swift in Sources */,
 				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,

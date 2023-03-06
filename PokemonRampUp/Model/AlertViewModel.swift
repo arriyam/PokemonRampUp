@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct AlertView {
+struct AlertViewModel {
     let title: String
     let message: String
     let style: UIAlertController.Style

@@ -54,7 +54,7 @@ class LandingViewController: UIViewController {
     }
     
     func displayAlert() {
-      let alertData = AlertView(title: "Error Loading Pokémon",
+      let alertData = AlertViewModel(title: "Error Loading Pokémon",
                               message: "Please try again or exist app",
                               style: .alert,
                               enableOkAction: true,

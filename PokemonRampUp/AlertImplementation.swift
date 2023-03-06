@@ -16,7 +16,7 @@ protocol AlertActionDelegate: AnyObject {
 class AlertImplementation: AlertFactoryService {
     weak var delegate: AlertActionDelegate?
     
-    func build(alertData: AlertView) -> UIViewController {
+    func build(alertData: AlertViewModel) -> UIViewController {
         let vc = UIAlertController(title: alertData.title,
                                    message: alertData.message,
                                    preferredStyle: alertData.style)

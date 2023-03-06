@@ -10,5 +10,5 @@ import UIKit
 
 protocol AlertFactoryService {
     var delegate: AlertActionDelegate? { get set }
-    func build(alertData: AlertView) -> UIViewController
+    func build(alertData: AlertViewModel) -> UIViewController
 }
