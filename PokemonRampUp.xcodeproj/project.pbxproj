@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A2DD129A92717007EAA5D /* WebServices.swift */; };
 		E03F6A682996887000367709 /* PokemonJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* PokemonJSON.swift */; };
+		E04ECFB429B7974600468F02 /* MoveTableCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04ECFB329B7974600468F02 /* MoveTableCustomCell.swift */; };
+		E04ECFB629B7977F00468F02 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04ECFB529B7977F00468F02 /* DetailsViewController.swift */; };
 		E07445E229A7C8860035974E /* pikachu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445DF29A7C8860035974E /* pikachu_response.json */; };
 		E07445E329A7C8860035974E /* error_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445E029A7C8860035974E /* error_response.json */; };
 		E07445E429A7C8860035974E /* pichu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445E129A7C8860035974E /* pichu_response.json */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		E03A2DD129A92717007EAA5D /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E03F6A672996887000367709 /* PokemonJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonJSON.swift; sourceTree = "<group>"; };
+		E04ECFB329B7974600468F02 /* MoveTableCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTableCustomCell.swift; sourceTree = "<group>"; };
+		E04ECFB529B7977F00468F02 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E07445DF29A7C8860035974E /* pikachu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pikachu_response.json; sourceTree = "<group>"; };
 		E07445E029A7C8860035974E /* error_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_response.json; sourceTree = "<group>"; };
 		E07445E129A7C8860035974E /* pichu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pichu_response.json; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E09F54D129AFE7D800E906C1 /* CustomCell.swift */,
+				E04ECFB329B7974600468F02 /* MoveTableCustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E0C395F529957BB400F7CD13 /* LandingViewController.swift */,
+				E04ECFB529B7977F00468F02 /* DetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				E0F02443299BE62600E83463 /* Move.swift in Sources */,
 				E0FE250229B6548B0069FF80 /* AlertFactoryService.swift in Sources */,
 				E0C4ABCC299C0C00007A4D58 /* Network.swift in Sources */,
+				E04ECFB429B7974600468F02 /* MoveTableCustomCell.swift in Sources */,
 				E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */,
 				E09F54D029AFD45A00E906C1 /* Images.swift in Sources */,
 				E0C395F629957BB400F7CD13 /* LandingViewController.swift in Sources */,
@@ -304,6 +311,7 @@
 				E0FE250729B656DA0069FF80 /* AlertImplementation.swift in Sources */,
 				E0FE250929B657470069FF80 /* AlertViewModel.swift in Sources */,
 				E03F6A682996887000367709 /* PokemonJSON.swift in Sources */,
+				E04ECFB629B7977F00468F02 /* DetailsViewController.swift in Sources */,
 				E0F0243F299BE56A00E83463 /* Ability.swift in Sources */,
 				E0C4ABCE299C0DBF007A4D58 /* NetworkError.swift in Sources */,
 				E0C395F229957BB400F7CD13 /* AppDelegate.swift in Sources */,

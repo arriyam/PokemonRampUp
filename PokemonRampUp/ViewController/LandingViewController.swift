@@ -12,6 +12,7 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     
     private let amountOfPokemon = 5
+    private var currentPokemonIndex = 0
     private var pokemons: [Pokemon]?
     private let webServices = WebServices()
     private let refreshControl = UIRefreshControl()
@@ -53,6 +54,13 @@ class LandingViewController: UIViewController {
         fetchPokemon()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "landingToDetailsPage"{
+            let detailsViewController = segue.destination as? DetailsViewController
+            detailsViewController?.pokemon = pokemons![currentPokemonIndex]
+        }
+    }
+    
     func displayAlert() {
       let alertData = AlertViewModel(title: "Error Loading Pokémon",
                               message: "Please try again or exist app",
@@ -92,7 +100,8 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TO-DO POKEMON[0007] - add implmentation to go to Details page
+        self.currentPokemonIndex = indexPath.row
+        performSegue(withIdentifier: "landingToDetailsPage", sender: self)
     }
     
 }
