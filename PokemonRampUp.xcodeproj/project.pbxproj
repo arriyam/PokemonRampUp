@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E027C86029B8ECE5001CD1FD /* WebServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027C85F29B8ECE5001CD1FD /* WebServicesTest.swift */; };
 		E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A2DD129A92717007EAA5D /* WebServices.swift */; };
 		E03F6A682996887000367709 /* PokemonJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* PokemonJSON.swift */; };
+		E05B8C6D29BFAEE1003EA7FD /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C6C29BFAEE1003EA7FD /* NetworkMock.swift */; };
+		E05B8C7029BFB16A003EA7FD /* StringURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C6F29BFB16A003EA7FD /* StringURLConstants.swift */; };
+		E05B8C7229BFB619003EA7FD /* ditto.png in Resources */ = {isa = PBXBuildFile; fileRef = E05B8C7129BFB619003EA7FD /* ditto.png */; };
 		E07445E229A7C8860035974E /* pikachu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445DF29A7C8860035974E /* pikachu_response.json */; };
 		E07445E329A7C8860035974E /* error_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445E029A7C8860035974E /* error_response.json */; };
 		E07445E429A7C8860035974E /* pichu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445E129A7C8860035974E /* pichu_response.json */; };
@@ -44,8 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E027C85F29B8ECE5001CD1FD /* WebServicesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTest.swift; sourceTree = "<group>"; };
 		E03A2DD129A92717007EAA5D /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E03F6A672996887000367709 /* PokemonJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonJSON.swift; sourceTree = "<group>"; };
+		E05B8C6C29BFAEE1003EA7FD /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		E05B8C6F29BFB16A003EA7FD /* StringURLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringURLConstants.swift; sourceTree = "<group>"; };
+		E05B8C7129BFB619003EA7FD /* ditto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ditto.png; path = ../../../../../Downloads/ditto.png; sourceTree = "<group>"; };
 		E07445DF29A7C8860035974E /* pikachu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pikachu_response.json; sourceTree = "<group>"; };
 		E07445E029A7C8860035974E /* error_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_response.json; sourceTree = "<group>"; };
 		E07445E129A7C8860035974E /* pichu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pichu_response.json; sourceTree = "<group>"; };
@@ -109,9 +117,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E05B8C6B29BFAEBE003EA7FD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E05B8C6C29BFAEE1003EA7FD /* NetworkMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E05B8C6E29BFB152003EA7FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E05B8C6F29BFB16A003EA7FD /* StringURLConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E07445DE29A7C7F60035974E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E05B8C7129BFB619003EA7FD /* ditto.png */,
 				E07445E129A7C8860035974E /* pichu_response.json */,
 				E07445DF29A7C8860035974E /* pikachu_response.json */,
 				E07445E029A7C8860035974E /* error_response.json */,
@@ -174,6 +199,9 @@
 		E0F02456299BE69000E83463 /* PokemonRampUpTests */ = {
 			isa = PBXGroup;
 			children = (
+				E05B8C6E29BFB152003EA7FD /* Utilities */,
+				E05B8C6B29BFAEBE003EA7FD /* Mocks */,
+				E027C85F29B8ECE5001CD1FD /* WebServicesTest.swift */,
 				E0F02457299BE69000E83463 /* PokemonModelTests.swift */,
 				E07445DE29A7C7F60035974E /* Resources */,
 			);
@@ -279,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05B8C7229BFB619003EA7FD /* ditto.png in Resources */,
 				E07445E229A7C8860035974E /* pikachu_response.json in Resources */,
 				E07445E429A7C8860035974E /* pichu_response.json in Resources */,
 				E07445E329A7C8860035974E /* error_response.json in Resources */,
@@ -316,7 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E027C86029B8ECE5001CD1FD /* WebServicesTest.swift in Sources */,
+				E05B8C7029BFB16A003EA7FD /* StringURLConstants.swift in Sources */,
 				E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */,
+				E05B8C6D29BFAEE1003EA7FD /* NetworkMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
