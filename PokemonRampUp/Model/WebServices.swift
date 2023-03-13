@@ -16,11 +16,6 @@ class WebServices {
     init(network: Network = DefaultNetwork()) {
         self.network = network
     }
-
-    // Returns a number from 1 to 1008(inclusive). The number is an Id which is used to fetch a random Pokemon from PokeAPI
-    private func randomIdGenerator() -> Int {
-        return Int.random(in: 1...1008)
-    }
     
     private func fetchPokemonUIIamges(pokemonJSON: PokemonJSON) async throws -> Images{
         async let frontDefaultImage = try network.loadUIImage(urlString: pokemonJSON.sprites.frontDefaultUrl)
@@ -30,26 +25,22 @@ class WebServices {
     }
 
     func fetchRandomPokemon() async throws -> Pokemon {
-        let uniquePokemonUrl = pokemonUrl + String(randomIdGenerator())
-        let randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
-        let images = try await fetchPokemonUIIamges(pokemonJSON: randomPokemonJSON)
-        let randomPokemon = Pokemon(pokemonJSON: randomPokemonJSON, images: images)
-        return randomPokemon
+        // Returns a number from 1 to 1008(inclusive). The number is an Id which is used to fetch a random Pokemon from PokeAPI
+        let randomId = Int.random(in: 1...1008)
+        return try await fetchPokemon(pokemonId: randomId)
     }
 
     func fetchPokemon(pokemonId: Int) async throws -> Pokemon {
         let uniquePokemonUrl = pokemonUrl + String(pokemonId)
         let randomPokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         let images = try await fetchPokemonUIIamges(pokemonJSON: randomPokemonJSON)
-        let randomPokemon = Pokemon(pokemonJSON: randomPokemonJSON, images: images)
-        return randomPokemon
+        return Pokemon(pokemonJSON: randomPokemonJSON, images: images)
     }
 
     func fetchPokemon(pokemonName: String) async throws -> Pokemon {
         let uniquePokemonUrl = pokemonUrl + pokemonName
         let pokemonJSON: PokemonJSON = try await network.loadJSONObject(stringURL: uniquePokemonUrl, type: PokemonJSON.self)
         let images = try await fetchPokemonUIIamges(pokemonJSON: pokemonJSON)
-        let pokemon = Pokemon(pokemonJSON: pokemonJSON, images: images)
-        return pokemon
+        return Pokemon(pokemonJSON: pokemonJSON, images: images)
     }
 }

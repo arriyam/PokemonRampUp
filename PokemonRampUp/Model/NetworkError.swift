@@ -13,4 +13,5 @@ enum NetworkError: Error {
     case dateParseError
     case requestError
     case invaildImageData
+    case invalidImageURL
 }

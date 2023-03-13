@@ -50,7 +50,7 @@ struct DefaultNetwork: Network {
 
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200 else {
-            throw NetworkError.invalidURL
+            throw NetworkError.invalidImageURL
         }
 
         guard let image = UIImage(data: data) else {
