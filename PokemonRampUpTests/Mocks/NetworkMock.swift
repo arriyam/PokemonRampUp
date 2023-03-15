@@ -17,14 +17,22 @@ struct NetworkMock: Network {
     
     let urlConstants = StringURLConstants()
     
-    func loadJSONObject<T>(stringURL: String, type: T.Type) async throws -> T where T : Decodable {
+    func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T {
         
-//        if (urlString == urlConstants.vaildJSONObjectURL){
-//            
-//        }
-//        else{
-//            throw GenericError.genericError
-//        }
+        if (stringURL != urlConstants.vaildImageURL){
+            throw GenericError.genericError
+        }
+        
+        let bundle = Bundle.main
+        guard let url = bundle.url(forResource: "pichu_response", withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+                throw GenericError.genericError
+        }
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        return try! decoder.decode(type.self, from: data)
     }
     
     func loadUIImage(urlString: String?) async throws -> UIImage? {
@@ -32,11 +40,9 @@ struct NetworkMock: Network {
             return nil
         }
         
-        if (urlString == urlConstants.vaildImageURL){
-            return UIImage(named: "ditto")
-        }
-        else{
+        if (urlString != urlConstants.vaildImageURL){
             throw GenericError.genericError
         }
+        return UIImage(named: "ditto")
     }
 }

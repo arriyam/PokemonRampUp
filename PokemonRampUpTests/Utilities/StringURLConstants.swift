@@ -8,7 +8,7 @@
 import Foundation
 
 struct StringURLConstants {
-    let vaildJSONObjectURL: String = "https://pokeapi.co/api/v2/pokemon/ditto"
-    let vaildImageURL: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+    let vaildJSONObjectURL: String = "https://pokeapi.co/api/v2/pokemon/pichu"
+    let vaildImageURL: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png"
     let invaildStringtURL: String = "Invalid URL String"
 }
