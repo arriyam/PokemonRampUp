@@ -18,9 +18,9 @@ class NetworkMock: Network {
     private var loadUIImagetSuccess = true
     
     
-    func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T {
+    func loadJSONObject<T: Decodable & Initializable>(stringURL: String, type: T.Type) async throws -> T {
         if (loadJSONObjectSuccess){
-            
+            return T()
         }
         throw GenericError.genericError
     }
@@ -30,7 +30,6 @@ class NetworkMock: Network {
             return UIImage(named: "pichu_image")
         }
         throw GenericError.genericError
-
     }
     
     func setloadJSONObjectSuccess(success: Bool) {

@@ -9,7 +9,7 @@ import UIKit
 
 // TO-DO [POKEMON-0012] Create unit test for Network model
 protocol Network {
-    func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T
+    func loadJSONObject<T: Decodable & Initializable>(stringURL: String, type: T.Type) async throws -> T
     func loadUIImage(urlString: String?) async throws -> UIImage?
 }
 
@@ -20,7 +20,7 @@ struct DefaultNetwork: Network {
         self.urlSession = urlSession
     }
 
-     func loadJSONObject<T: Decodable>(stringURL: String, type: T.Type) async throws -> T {
+     func loadJSONObject<T: Decodable & Initializable>(stringURL: String, type: T.Type) async throws -> T {
          guard let url = URL(string: stringURL) else {
              throw NetworkError.invalidURL
          }

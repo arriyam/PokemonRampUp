@@ -7,8 +7,13 @@
 
 import Foundation
 
+// Protcol to insure that a class has a init block that takes no parameters
+protocol Initializable {
+    init()
+}
+
 // PokemonJSON struct represents a Pokemon object that is decodbale as this is a responce model
-struct PokemonJSON: Decodable {
+struct PokemonJSON: Decodable & Initializable {
     let name: String
     let elementTypes: [ElementType]
     let abilities: [Ability]
