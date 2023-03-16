@@ -16,6 +16,10 @@ struct Ability: Decodable {
         case name
     }
     
+    init(name: String){
+        self.name = name
+    }
+    
     // Custom decoder init block to work with nested JSON objects
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

@@ -21,6 +21,12 @@ struct Sprites: Decodable {
         case officialArtwork = "official-artwork"
     }
     
+    init (frontDefaultUrl: String?, frontShinyUrl: String?, frontOfficialArtworkUrl: String?){
+        self.frontDefaultUrl = frontDefaultUrl
+        self.frontShinyUrl = frontShinyUrl
+        self.frontOfficialArtworkUrl = frontOfficialArtworkUrl
+    }
+    
     // Custom decoder init block to work with nested JSON objects
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
