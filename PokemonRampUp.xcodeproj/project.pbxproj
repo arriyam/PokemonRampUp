@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E002E97429C3A0A300083781 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002E97329C3A0A300083781 /* NetworkMock.swift */; };
+		E002E97629C3A26400083781 /* pichu_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E002E97529C3A26400083781 /* pichu_image.png */; };
+		E002E97829C497BE00083781 /* WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002E97729C497BE00083781 /* WebServicesTests.swift */; };
 		E03A2DD229A92717007EAA5D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A2DD129A92717007EAA5D /* WebServices.swift */; };
 		E03F6A682996887000367709 /* PokemonJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03F6A672996887000367709 /* PokemonJSON.swift */; };
 		E07445E229A7C8860035974E /* pikachu_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E07445DF29A7C8860035974E /* pikachu_response.json */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E002E97329C3A0A300083781 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		E002E97529C3A26400083781 /* pichu_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pichu_image.png; path = ../../../../../Desktop/pichu_image.png; sourceTree = "<group>"; };
+		E002E97729C497BE00083781 /* WebServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTests.swift; sourceTree = "<group>"; };
 		E03A2DD129A92717007EAA5D /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E03F6A672996887000367709 /* PokemonJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonJSON.swift; sourceTree = "<group>"; };
 		E07445DF29A7C8860035974E /* pikachu_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pikachu_response.json; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E002E97229C3A08F00083781 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E002E97329C3A0A300083781 /* NetworkMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		E03F6A662996886600367709 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +126,7 @@
 		E07445DE29A7C7F60035974E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E002E97529C3A26400083781 /* pichu_image.png */,
 				E07445E129A7C8860035974E /* pichu_response.json */,
 				E07445DF29A7C8860035974E /* pikachu_response.json */,
 				E07445E029A7C8860035974E /* error_response.json */,
@@ -174,7 +189,9 @@
 		E0F02456299BE69000E83463 /* PokemonRampUpTests */ = {
 			isa = PBXGroup;
 			children = (
+				E002E97729C497BE00083781 /* WebServicesTests.swift */,
 				E0F02457299BE69000E83463 /* PokemonModelTests.swift */,
+				E002E97229C3A08F00083781 /* Mocks */,
 				E07445DE29A7C7F60035974E /* Resources */,
 			);
 			path = PokemonRampUpTests;
@@ -280,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07445E229A7C8860035974E /* pikachu_response.json in Resources */,
+				E002E97629C3A26400083781 /* pichu_image.png in Resources */,
 				E07445E429A7C8860035974E /* pichu_response.json in Resources */,
 				E07445E329A7C8860035974E /* error_response.json in Resources */,
 			);
@@ -316,7 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E002E97429C3A0A300083781 /* NetworkMock.swift in Sources */,
 				E0F02458299BE69000E83463 /* PokemonModelTests.swift in Sources */,
+				E002E97829C497BE00083781 /* WebServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

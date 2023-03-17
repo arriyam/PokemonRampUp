@@ -8,12 +8,16 @@
 import Foundation
 
 // Ability struct represents a Pokemon ability
-struct Ability: Decodable {
+struct Ability: Decodable & Equatable {
     let name: String
     
     enum CodingKeys: String, CodingKey {
         case ability
         case name
+    }
+    
+    init(name: String){
+        self.name = name
     }
     
     // Custom decoder init block to work with nested JSON objects
