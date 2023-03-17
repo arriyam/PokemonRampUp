@@ -33,12 +33,8 @@ class DetailsViewController: UIViewController {
     
     func setPokemonMoveList(){
         self.pokemonMoves = []
-        
-        for move in pokemon.moves{
-            self.pokemonMoves?.append(move.name)
-        }
+        self.pokemonMoves = pokemon.moves.compactMap { $0.name }
         moveTableView.reloadData()
-        
     }
 }
 
