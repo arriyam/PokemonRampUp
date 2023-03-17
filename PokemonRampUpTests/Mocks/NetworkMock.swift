@@ -40,5 +40,4 @@ class NetworkMock: Network {
         self.loadUIImagetSuccess = success
     }
     
-    
 }

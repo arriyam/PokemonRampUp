@@ -8,7 +8,7 @@
 import Foundation
 
 // TypeElement struct represents a Pokemon type
-struct ElementType: Decodable {
+struct ElementType: Decodable & Equatable {
     let name: String
     
     enum CodingKeys: String, CodingKey {

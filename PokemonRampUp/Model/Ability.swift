@@ -8,7 +8,7 @@
 import Foundation
 
 // Ability struct represents a Pokemon ability
-struct Ability: Decodable {
+struct Ability: Decodable & Equatable {
     let name: String
     
     enum CodingKeys: String, CodingKey {
